@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/css/bootstrap-tour-standalone.min.css" rel="stylesheet">
+<style>
+
+
+    #my-element, #my-other-element{
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        margin: 100px auto;
+    }
+</style>
+
+</head>
+
+
+<body>
+
+    Test
+
+<div id="my-element"></div>
+<br/>
+<div id="my-other-element"></div>
+
+    <script src="jquery/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/js/bootstrap-tour-standalone.min.js"></script>
+
+
+    <script>
+
+        // Instance the tour
+        var tour = new Tour({
+            steps: [
+                {
+                    element: "#my-element",
+                    title: "Title of my step",
+                    content: "Content of my step"
+                },
+                {
+                    element: "#my-other-element",
+                    title: "Title of my step",
+                    content: "Content of my step"
+                }
+            ]
+        });
+
+        // Initialize the tour
+        tour.init();
+
+        // Start the tour
+        tour.start();
+    </script>
+</body>
+
+</html>
